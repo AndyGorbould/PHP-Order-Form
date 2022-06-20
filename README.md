@@ -71,11 +71,13 @@ SESSION = dead when page closed
 
 ## NOTES
 Must have a submit. remember isset
-READ PHP Require (end of index.php)
-READ cookie GPRD requirements, posted in discord
+READ PHP Require (end of index.php) - a type of linking
+READ cookie GPRD requirements - https://gdpr.eu/cookies/
+READ form actions - https://www.tutorialrepublic.com/php-tutorial/php-form-handling.php : The action attribute references a PHP file "something.php" that receives the data entered into the form when user submit it by pressing the submit button.
 
 
 ## Steps taken:
 1. Zipcode only accepts numbers (<input type="number")
 2. Add products
-3. $product['price'] foreach loop to get $totalValue ? if true, add price, else do nothing ?
+3. Sort out the isset & display all form info on submit. 
+4. $product['price'] foreach loop to get $totalValue ? if true, add price, else do nothing ?
