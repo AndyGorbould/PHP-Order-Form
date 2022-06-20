@@ -27,7 +27,7 @@
         </ul>
     </nav>
     */ ?>
-    <form method="post">
+    <form action="" method="post">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="email">E-mail:</label>
@@ -75,6 +75,13 @@
     </form>
 
     <footer>You already ordered <strong>&euro; <?php echo $totalValue ?></strong> in food and drinks.</footer>
+
+    <!-- Display user's input -->
+    <p>Your email is <b><?php echo $email; ?></b>.</p>
+    <p>Your street is <b><?php echo $street; ?></b>.</p>
+    <p>Your house number is <b><?php echo $housenumber; ?></b>.</p>
+    <p>Your City is <b><?php echo $city; ?></b>.</p>
+    <p>Your zipcode is <b><?php echo $zipcode; ?></b>.</p>
 </div>
 
 <style>

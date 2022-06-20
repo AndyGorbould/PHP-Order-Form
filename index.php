@@ -10,7 +10,8 @@ declare(strict_types=1);
 session_start();
 
 // Use this function when you need to need an overview of these variables
-function whatIsHappening() {
+function whatIsHappening()
+{
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
     echo '<h2>$_POST</h2>';
@@ -34,6 +35,15 @@ $products = [
 
 $totalValue = 0;
 
+
+// define inputs
+$email = $_POST["email"];
+$street = $_POST["street"];
+$housenumber = $_POST["streetnumber"];
+$city = $_POST["city"];
+$zipcode = $_POST["zipcode"];
+
+
 function validate()
 {
     // TODO: This function will send a list of invalid fields back
@@ -43,19 +53,24 @@ function validate()
 function handleForm()
 {
     // TODO: form related tasks (step 1)
+    //    foreach ($products as $product=>$price) 
+
+
+
+
 
     // Validation (step 2)
-    $invalidFields = validate();
-    if (!empty($invalidFields)) {
-        // TODO: handle errors
-    } else {
-        // TODO: handle successful submission
-    }
+    // $invalidFields = validate();
+    // if (!empty($invalidFields)) {
+    //     // TODO: handle errors
+    // } else {
+    //     // TODO: handle successful submission
+    // }
 }
 
 // TODO: replace this if by an actual check
 $formSubmitted = false;
-if ($formSubmitted) {
+if (isset($_POST["submit"])) {
     handleForm();
 }
 
