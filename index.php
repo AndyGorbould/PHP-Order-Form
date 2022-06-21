@@ -61,28 +61,51 @@ function handleForm($products)
     $housenumber = $_POST["streetnumber"];
     $city = $_POST["city"];
     $zipcode = $_POST["zipcode"];
-    $productsOrdered = $_POST["products"];
-
-    echo "<p>Your email is: <b>" . $email . "</b></p>
-            <p>Your street is: <b>" . $street . "</b></p>
-            <p>Your house number is: <b>" . $housenumber . "</b></p>
-            <p>Your City is: <b>" . $city . "</b></p>
-            <p>Your zipcode is: <b>" . $zipcode . "</b></b></p>";
 
 
-
-    $totalPrice = 0; // error if not initialized in the func.
-    echo "<h4 style='color: red'> YOU ORDERED:</br></h4>";
-    // TODO: form related tasks (step 1)   ---- take from 87 on form
-    foreach ($_POST["products"] as $i => $selectedProduct) {
-
-        echo "<p style='color: red'>" . $products[$i]["name"] . "</br></p>";
-        echo "<p style='color: red'>&euro;" . $products[$i]["price"] . "</br></p>";
-        $totalPrice += $products[$i]["price"]; // Arithmetic Assignment Operators - https://www.php.net/manual/en/language.operators.assignment.php
-
+    // empty box check
+    if (isset($email)) {
+        echo '<div class="alert alert-danger" role="alert">
+        Please enter your email address!</div>';
     }
-    // print after the loop ^
-    echo "<p style='color: red'><strong>Total Price:</strong> &euro;" . $totalPrice . "</br></p>";
+    if (isset($street)) {
+        echo '<div class="alert alert-danger" role="alert">
+        Please enter your street!</div>';
+    }
+    if (isset($housenumber)) {
+        echo '<div class="alert alert-danger" role="alert">
+        Please enter your house number!</div>';
+    }
+    if (isset($city)) {
+        echo '<div class="alert alert-danger" role="alert">
+        Please enter your City!</div>';
+    }
+    if (isset($zipcode)) {
+        echo '<div class="alert alert-danger" role="alert">
+        Please enter your zipcode!</div>';
+    }
+    else {
+             
+        echo "<div id='userInfoDisplay'>
+        <p>Your email is: <b>" . $email . "</b></p>
+        <p>Your delivery address is: <b>" . $street . " " . $housenumber . ", " . $city . " " . $zipcode . "</b></p>
+        </div>";
+        
+        
+        
+        
+        $totalPrice = 0; // error if not initialized in the func.
+        echo "<h4 style='color: red'> YOU ORDERED:</br></h4>";
+        // TODO: form related tasks (step 1)   ---- take from 87 on form
+        foreach ($_POST["products"] as $i => $selectedProduct) {
+            
+            echo "<p style='color: red'>" . $products[$i]["name"] . " &euro;" . $products[$i]["price"] . "</p>";
+            $totalPrice += $products[$i]["price"]; // Arithmetic Assignment Operators - https://www.php.net/manual/en/language.operators.assignment.php
+            
+        }
+        // print after the loop ^
+        echo "<p style='color: red'><strong>Total Price:</strong> &euro;" . $totalPrice . "</br></p>";
+    }
 }
 
 
