@@ -76,12 +76,16 @@
 
     <footer>You already ordered <strong>&euro; <?php echo $totalValue ?></strong> in food and drinks.</footer>
 
-    <!-- Display user's input -->
-    <p>Your email is <b><?php echo $email; ?></b>.</p>
-    <p>Your street is <b><?php echo $street; ?></b>.</p>
-    <p>Your house number is <b><?php echo $housenumber; ?></b>.</p>
-    <p>Your City is <b><?php echo $city; ?></b>.</p>
-    <p>Your zipcode is <b><?php echo $zipcode; ?></b>.</p>
+    <!-- Display user's input ----  DO ECHO in index-->
+    <p>Your email is <b><?php echo $email; ?></b></p>
+    <p>Your street is <b><?php echo $street; ?></b></p>
+    <p>Your house number is <b><?php echo $housenumber; ?></b></p>
+    <p>Your City is <b><?php echo $city; ?></b></p>
+    <p>Your zipcode is <b><?php echo $zipcode; ?></b></b></p>
+    <!--  -->
+
+
+    
 </div>
 
 <style>

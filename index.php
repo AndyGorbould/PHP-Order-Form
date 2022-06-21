@@ -6,6 +6,15 @@
 // This line makes PHP behave in a more strict way
 declare(strict_types=1);
 
+$products = [
+    ['name' => 'Joker IPA', 'price' => 5],
+    ['name' => 'Caesar Augustus', 'price' => 4.5],
+    ['name' => 'Birds & Bees', 'price' => 4.5],
+    ['name' => 'Seven Giraffes', 'price' => 5],
+    ['name' => 'Fraoch', 'price' => 5],
+    ['name' => 'Nth Degree', 'price' => 6],
+];
+
 // We are going to use session variables so we need to enable sessions
 session_start();
 
@@ -24,14 +33,6 @@ function whatIsHappening()
 whatIsHappening();
 
 // TODO: provide some products (you may overwrite the example)
-$products = [
-    ['name' => 'Joker IPA', 'price' => 5],
-    ['name' => 'Caesar Augustus', 'price' => 4.5],
-    ['name' => 'Birds & Bees', 'price' => 4.5],
-    ['name' => 'Seven Giraffes', 'price' => 5],
-    ['name' => 'Fraoch', 'price' => 5],
-    ['name' => 'Nth Degree', 'price' => 6],
-];
 
 $totalValue = 0;
 
@@ -42,6 +43,9 @@ $street = $_POST["street"];
 $housenumber = $_POST["streetnumber"];
 $city = $_POST["city"];
 $zipcode = $_POST["zipcode"];
+$productsOrdered = $_POST["products"];
+// var_dump($productsOrdered);
+// var_dump($productsOrdered[0]);
 
 
 function validate()
@@ -50,28 +54,30 @@ function validate()
     return [];
 }
 
-function handleForm()
+function handleForm($products)
 {
-    // TODO: form related tasks (step 1)
-    //    foreach ($products as $product=>$price) 
+    $totalPrice = 0; // error if not initialized in the func.
+    echo "<h4 style='color: red'> YOU ORDERED:</br></h4>";
+    // TODO: form related tasks (step 1)   ---- take from 87 on form
+    foreach ($_POST["products"] as $i => $selectedProduct) {
+        
+        echo "<p style='color: red'>" . $products[$i]["name"] . "</br></p>";
+        echo "<p style='color: red'>&euro;" . $products[$i]["price"] ."</br></p>";
+        $totalPrice += $products[$i]["price"]; // Arithmetic Assignment Operators - https://www.php.net/manual/en/language.operators.assignment.php
+        
+    }
+    // print after the loop ^
+    echo "<p style='color: red'><strong>Total Price:</strong> &euro;" . $totalPrice ."</br></p>";
+       
 
-
-
-
-
-    // Validation (step 2)
-    // $invalidFields = validate();
-    // if (!empty($invalidFields)) {
-    //     // TODO: handle errors
-    // } else {
-    //     // TODO: handle successful submission
-    // }
 }
+
 
 // TODO: replace this if by an actual check
 $formSubmitted = false;
-if (isset($_POST["submit"])) {
-    handleForm();
+if (isset($_POST["products"])) {
+    handleForm($products);
 }
 
 require 'form-view.php';
+
