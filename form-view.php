@@ -65,12 +65,14 @@
 
             <fieldset>
                 <legend>Products</legend>
+                <div class="container-fluid">
                 <?php foreach ($products as $i => $product) : ?>
                     <!--  -->
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
+                
+                    <div class="card mb-3 col-sm-4 border-dark" style="max-width: 400px; float: left; margin: 20px;">
+                        <div class="row">
                             <div class="col-md-4">
-                                <img src="<?php echo $product['imgsrc'] ?>" class="img-fluid rounded-start" alt="...">
+                                <img src="<?php echo $product['imgsrc'] ?>" class="img-fluid rounded-start mh-50" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -85,6 +87,7 @@
                     <!--  -->
 
                 <?php endforeach; ?>
+                </div>
             </fieldset>
 
             <button type="submit" class="btn btn-primary">Order!</button>

@@ -74,7 +74,8 @@ Must have a submit. remember isset
 READ PHP Require (end of index.php) - a type of linking
 READ cookie GPRD requirements - https://gdpr.eu/cookies/
 READ form actions - https://www.tutorialrepublic.com/php-tutorial/php-form-handling.php : The action attribute references a PHP file "something.php" that receives the data entered into the form when user submit it by pressing the submit button.
-
+READ require  (conditional rendering)
+>>> add     float: left;   to cards  css class
 
 ## Steps taken:
 1. Zipcode only accepts numbers (<input type="number")

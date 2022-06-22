@@ -148,9 +148,11 @@ function handleForm($products)
 
 
 // TODO: replace this if by an actual check
+
+
+require 'form-view.php';
+
 $formSubmitted = false;
 if (isset($_POST["products"])) {
     handleForm($products);
 }
-
-require 'form-view.php';
