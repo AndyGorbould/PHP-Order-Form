@@ -33,7 +33,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" class="form-control" />
+                    <input type="email" id="email" name="email" class="form-control" required/>
                 </div>
                 <div></div>
             </div>
@@ -69,15 +69,16 @@
                 <?php foreach ($products as $i => $product) : ?>
                     <!--  -->
                 
-                    <div class="card mb-3 col-sm-4 border-dark" style="max-width: 400px; float: left; margin: 20px;">
+                    <div class="card mb-3 col-sm-4 border-dark shadow" style="max-width: 400px; float: left; margin: 20px;">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="<?php echo $product['imgsrc'] ?>" class="img-fluid rounded-start mh-50" alt="...">
+                                <img src="<?php echo $product['imgsrc'] ?>" class="img-fluid rounded-start mw-50" alt="...">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 bg-info text-light">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $product['name'] ?></h5>
                                     <p class="card-text">Description.. Description.. Description.. Description.. Description.. Description.. Description..</p>
+                                    <hr style="border-top: 3px dotted #555;" >
                                     <p class="card-text"><input type="checkbox" value="1" name="products[<?php echo $i ?>]" /> <?php echo $product['name'] ?> -
                                         &euro;<?= number_format($product['price'], 2) ?></p>
                                 </div>

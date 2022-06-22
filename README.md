@@ -9,6 +9,8 @@
 
 ### Preparation
 - Have a look at the provided structure: you get both an index file and another file containing a form. How are these two working together?
+> They work together in a SESSION by allowing both pages to use variables freely between them
+
 - Think of a funny / surprising / original name for a store that should definitely exist. (fancy suits for cats? bongo for dates? you name it!)
 - Think of some products to sell (feel free to be creative) and update the products array with these.
 - Check if all the products & prices are currently visible in the form.
@@ -18,10 +20,10 @@
 - We will learn how to save this information to a database later, so no need to do this now.
 
 ### Step 2: validation
-- Use PHP to check the following:
-    - Required fields are not empty.
-    - Zip code are only numbers.
-    - Email address is valid.
+- Use PHP to check the following: ** I did this wrong by using html to do this
+    - Required fields are not empty. * put "required" in the input tag
+    - Zip code are only numbers. *type number
+    - Email address is valid. *type email
 - Show any problems (empty or invalid data) with the fields at the top of the form. Tip: use the [bootstrap alerts](https://getbootstrap.com/docs/4.0/components/alerts/) for inspiration. If they are valid, the confirmation of step 1 is shown.
 - If the form was not valid, show the previous values in the form so that the user doesn't have to retype everything.
 
