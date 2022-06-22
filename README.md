@@ -81,3 +81,4 @@ READ form actions - https://www.tutorialrepublic.com/php-tutorial/php-form-handl
 2. Add products
 3. Sort out the isset & display all form info on submit. 
 4. $product['price'] foreach loop to get $totalValue ? if true, add price, else do nothing ?
+5. Error variables with echos for 'alert-danger' bootstrap components for  required fields
