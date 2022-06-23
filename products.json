@@ -1,0 +1,57 @@
+{
+    "Products": [
+        {
+            "Joker IPA": {
+                "Name": "Joker IPA",
+                "Price": "5",
+                "ABV": "5.0%",
+                "Tag": "Wickedly hoppy",
+                "Description": "There's at least one in every pack and this is our very own agent of chaos. Created from a complex layer of malts and blended hops, this well balanced IPA delivers satisfaction every time. Golden in the glass, fruity on the nose with hints of cedar. Joker IPA is Bitter/Sweet, full of flavour and is sure to put a smile on your face."
+            }
+        },
+        {
+            "Caear Augustus": {
+                "Name": "Caear Augustus",
+                "Price": "4.5",
+                "ABV": "4.1%",
+                "Tag": "Lager / IPA Hybrid",
+                "Description": "This Lager /IPA hybrid is a revolution in refreshment and flavour. All the crisp clean notes of the finest lager but with the discrete bitter finish of a well-balanced IPA. It's not confused about what it wants' to be, it's just the best of both worlds."
+            }
+        },
+        {
+            "Birds & Bees": {
+                "Name": "Birds & Bees",
+                "Price": "4.5",
+                "ABV": "4.3%",
+                "Tag": "Golden  Summer Ale",
+                "Description": "Brewed for the summer evenings when we down tools for the day and retire to the beer garden. This bright, golden ale is a blend of lager malt, Cascade, Amarillo & Nelson Sauvin hops with a late infusion of elderflower. Fruity, aromatic and deliciously refreshing."
+            }
+        },
+        {
+            "Seven Giraffes": {
+                "Name": "Seven Giraffes",
+                "Price": "5",
+                "ABV": "5.1%",
+                "Tag": "Extraordinary IPA",
+                "Description": "A blend of 7 grains, 3 hop strains and a late infusion of elderflower: This aromatic IPA was named by Scott's daughter. It pours a deep gold with aroma's of elderflower and citrus hops, followed by sweet caramel. On the tongue the biscuity malts are perfectly balanced with the bitterness of the hops, with a lingering floral elderflower aftertaste. An extraordinary brew."
+            }
+        },
+        {
+            "Fraoch": {
+                "Name": "Fraoch",
+                "Price": "5",
+                "ABV": "5.0%",
+                "Tag": "Heather Ale",
+                "Description": "The Original Craft Beer; brewed in Scotland since 2000 B.C. The Brotherhood have been guardians of the ancient Gaelic recipe for &quot;Leann Fraoch&quot; (Heather Ale) since 1988 & are proud to be the only brewery still producing this unique style of beer & distributing it world-wide. A light amber ale with floral-peaty aroma, full malt character, and a spicy herbal finish - This beer allows you to literally pour 4000 years of Scottish history into a glass."
+            }
+        },
+        {
+            "Nth Degree": {
+                "Name": "Nth Degree",
+                "Price": "6",
+                "ABV": "7.5%",
+                "Tag": "Double IPA",
+                "Description": "Heavily hopped with Simcoe, we don't stop there.  Bringing in backup from the Pacific North West’s finest, this DIPA has heady notes of Citrus, Pine & Sweet Tropical fruits with a deep, resinous bitterness."
+            }
+        }
+    ]}
